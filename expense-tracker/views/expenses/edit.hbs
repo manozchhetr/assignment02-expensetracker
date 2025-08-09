@@ -1,0 +1,28 @@
+{{!-- Edit Expense Form --}}
+{{> header}}
+
+<div class="container mt-4">
+  <h2>Edit Expense</h2>
+  <form action="/expenses/edit/{{expense._id}}" method="POST">
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label>
+      <input type="text" class="form-control" name="category" id="category" value="{{expense.category}}" required>
+    </div>
+    <div class="mb-3">
+      <label for="amount" class="form-label">Amount</label>
+      <input type="number" step="0.01" class="form-control" name="amount" id="amount" value="{{expense.amount}}" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" name="description" id="description">{{expense.description}}</textarea>
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="date" class="form-control" name="date" id="date" value="{{expense.date}}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Expense</button>
+    <a href="/expenses" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+
+{{> footer}}

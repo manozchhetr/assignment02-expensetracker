@@ -1,0 +1,74 @@
+<h2 class="mb-4 text-center">Add a New Expense</h2>
+<form action="users/expenses/add" method="POST" novalidate autocomplete="off" aria-label="Expense form">
+  <div class="mb-4">
+    <label for="date" class="form-label fw-semibold">Date</label>
+    <input
+      type="date"
+      name="date"
+      id="date"
+      class="form-control"
+      required
+      aria-describedby="dateHelp"
+    />
+    <div id="dateHelp" class="form-text">
+      Select the date of the expense.
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <label for="description" class="form-label fw-semibold">Description</label>
+    <input
+      type="text"
+      name="description"
+      id="description"
+      class="form-control"
+      placeholder="Enter a brief description"
+      required
+      minlength="3"
+      maxlength="100"
+      aria-describedby="descriptionHelp"
+    />
+    <div id="descriptionHelp" class="form-text">
+      Provide a brief description of the expense.
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <label for="amount" class="form-label fw-semibold">Amount</label>
+    <input
+      type="number"
+      name="amount"
+      id="amount"
+      class="form-control"
+      placeholder="Enter the amount"
+      required
+      min="0.01"
+      step="0.01"
+      aria-describedby="amountHelp"
+    />
+    <div id="amountHelp" class="form-text">
+      Enter the expense amount.
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <label for="category" class="form-label fw-semibold">Category</label>
+    <input
+      type="text"
+      name="category"
+      id="category"
+      class="form-control"
+      placeholder="Enter the category"
+      required
+      minlength="3"
+      maxlength="50"
+      aria-describedby="categoryHelp"
+    />
+    <div id="categoryHelp" class="form-text">
+      Specify the category of the expense.
+    </div>
+  </div>
+
+  <!-- Add Submit Button -->
+  <button type="submit" class="btn btn-primary">Add Expense</button>
+</form>

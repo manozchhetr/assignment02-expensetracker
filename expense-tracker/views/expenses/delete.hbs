@@ -1,0 +1,20 @@
+{{!-- Delete Expense Confirmation --}}
+{{> header}}
+
+<div class="container mt-4">
+  <h2>Delete Expense</h2>
+  <p>Are you sure you want to delete the following expense?</p>
+  <ul>
+    <li><strong>Category:</strong> {{expense.category}}</li>
+    <li><strong>Amount:</strong> {{expense.amount}}</li>
+    <li><strong>Description:</strong> {{expense.description}}</li>
+    <li><strong>Date:</strong> {{expense.date}}</li>
+  </ul>
+
+  <form action="/expenses/delete/{{expense._id}}" method="POST">
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a href="/expenses" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+
+{{> footer}}

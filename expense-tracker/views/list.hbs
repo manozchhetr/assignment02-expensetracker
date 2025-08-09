@@ -1,0 +1,22 @@
+<h2>Your Expenses</h2>
+<a href="/expenses/add" class="btn btn-success mb-3">Add Expense</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Amount</th>
+      <th>Description</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each expenses}}
+      <tr>
+        <td>{{category}}</td>
+        <td>${{amount}}</td>
+        <td>{{description}}</td>
+        <td>{{date}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
